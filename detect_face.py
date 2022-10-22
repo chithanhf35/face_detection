@@ -19,7 +19,6 @@ while (True):
     ret, img = camera.read()
     if ret:
 
-
         # Chuyen gray
         gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
         faces = face_cascade.detectMultiScale(gray, 1.2, 10,minSize=(100,100))
