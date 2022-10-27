@@ -1,25 +1,9 @@
-﻿import cv2
-import imutils
-"""camera_id = 0
-# Mở camera
-cap = cv2.VideoCapture(camera_id)
-# Đọc ảnh từ camera
-while(True):
-    ret, frame = cap.read()
-    cv2.imshow("cam",frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-      break
-# Giải phóng camera
-cap.release()"""
-img= cv2.imread("b.jpg")
-cv2.imshow("xe tank", img)
-cv2.waitKey()
-img_r= imutils.rotate(img,90)
-cv2.imshow("rotate",img_r)
-cv2.waitKey()
-cv2.destroyAllWindows()
-"""# Đặt kích thước cho ảnh
-img_rs = cv2.resize(img,dsize=(1000,600))
-cv2.imshow("resize",img_rs)
-cv2.waitKey()
-"""
+﻿from importlib.resources import path
+cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+                        print('warring warring')
+                        t1=threading.Thread(target=playsound(r'C:\Users\chith\OneDrive\Desktop\2022_Python\alert.mp3'), args=('wake up',))
+                        t1.start()
+                        t1.join()
+                        cv2.putText(frame,"DROWSINESS",(10, 30),cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+                        cv2.drawContours(frame, [leftEyeHull], -1,  (0, 255, 0),1)
+                        cv2.drawContours(frame, [rightEyeHull], -1, (0, 255, 0),1)
